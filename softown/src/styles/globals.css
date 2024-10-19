@@ -630,7 +630,7 @@ span {
 	}
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 1200px) {
 	.text-container {
 		font-size: 24px;
 		margin-top: 80px;
@@ -728,11 +728,6 @@ span {
 	.buttons-row {
 		flex-direction: row;
 		gap: 30px;
-	}
-
-	.plan-card {
-		width: 50%;
-		margin-bottom: 60px;
 	}
 
 	.social-icons a {
