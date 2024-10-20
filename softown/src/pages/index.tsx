@@ -20,6 +20,12 @@ export default function Home() {
     }
   }
 
+  function descerpagina() {
+    document
+      .getElementsByClassName("plans-container")[0]
+      .scrollIntoView({ behavior: "smooth" });
+  }
+
   return (
     <>
       <Head>
@@ -42,7 +48,7 @@ export default function Home() {
               width={250}
               height={70}
               id="logo-top"
-              priority={true}
+              fetchPriority="high"
             />
             <Image
               src="/assets/dot.png"
@@ -50,7 +56,7 @@ export default function Home() {
               className="overlay-image"
               width={300}
               height={200}
-              priority={true}
+              fetchPriority="high"
             />
             <button>
               Acessar o <strong>Sistema</strong>
@@ -73,7 +79,9 @@ export default function Home() {
           </div>
           <div className="buttons-row">
             <button>Conheça nossa ferramenta</button>
-            <button id="bt-dif">Conheça nossos planos</button>
+            <button id="bt-dif" onClick={descerpagina}>
+              Conheça nossos planos
+            </button>
           </div>
         </div>
         <div className="app-example-image">
@@ -82,7 +90,8 @@ export default function Home() {
             alt="Imagem do aplicativo"
             width={1500}
             height={800}
-            priority={true}
+            fetchPriority="high"
+            id="example-image"
           />
         </div>
         <div className="description">
@@ -93,7 +102,7 @@ export default function Home() {
               width={800}
               height={600}
               className="process-image"
-              priority={true}
+              fetchPriority="high"
             />
           </div>
           <div className="desc-text-container">
@@ -186,7 +195,7 @@ export default function Home() {
               width={800}
               height={600}
               className="data-image"
-              priority={true}
+              fetchPriority="high"
             />
           </div>
         </div>
@@ -198,10 +207,9 @@ export default function Home() {
               width={700}
               height={500}
               className="flux-image"
-              priority={true}
             />
           </div>
-          <div className="desc-text-container">
+          <div className="desc-text-container" id="flux-text-container">
             <h2>Agenda e prontuário de seus pacientes.</h2>
             <span id="flux-desc">
               Explica pro Product Onwer que o módulo de recursão paralela
@@ -276,9 +284,9 @@ export default function Home() {
                 src="/assets/sixty-decoration.png"
                 alt="Imagem de fundo sobreposta"
                 className="overlay-back-image"
-                priority={true}
+                fetchPriority="high"
                 fill
-                style={{ objectFit: 'cover' }}
+                style={{ objectFit: "cover" }}
               />
               <Image
                 src="/assets/ilustration.png"
@@ -286,7 +294,7 @@ export default function Home() {
                 className="paper-image"
                 width={700}
                 height={500}
-                priority={true}
+                fetchPriority="high"
               />
             </div>
           </div>
@@ -397,7 +405,9 @@ export default function Home() {
         </div>
         <div className="faq-container">
           <div className="faq-questions">
-            <h2>Perguntas frequentes</h2>
+            <div className="faq">
+              <h2>Perguntas frequentes</h2>
+            </div>
 
             <div className="faq-item">
               <div className="faq-question" onClick={() => setIsOpen(!isOpen)}>
