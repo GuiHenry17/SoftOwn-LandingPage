@@ -141,7 +141,6 @@ button:active {
   position: relative;
   display: flex;
   width: 100%;
-  margin-bottom: 20px;
   justify-content: space-around;
   align-items: center;
   background: white;
