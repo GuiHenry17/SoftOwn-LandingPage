@@ -1,3 +1,4 @@
+/* Fonte customizada */
 @font-face {
   font-family: "MonstSerrat";
   src: url("../fonts/Montserrat-Regular.ttf");
@@ -104,6 +105,7 @@ button:active {
   gap: 20px;
 }
 
+/* Animação customizada */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -190,8 +192,12 @@ button:active {
   color: rgba(2, 119, 238, 1);
 }
 
+.desc-text-container {
+  max-width: 60%;
+}
+
 #flux-text-container {
-  max-width: 75%;
+  max-width: 60%;
 }
 
 .desc-text-container-paper {
@@ -482,8 +488,13 @@ span {
 
 .footer-container {
   background-color: #0277ee;
-  padding: 40px 0;
+  padding: 10px;
   text-align: center;
+}
+
+.footer-container img {
+  height: 90px;
+  width: 100px;
 }
 
 .footer-content {
@@ -516,6 +527,8 @@ span {
 .social-icons a:hover {
   color: #00bcd4;
 }
+
+/* Media Queries (responsividade) */
 
 @media (max-width: 844px) {
   .overlay-image,
@@ -592,6 +605,7 @@ span {
 
   #flux-desc {
     margin-bottom: 20px;
+    font-size: medium;
   }
 
   .desc-text-container-paper h2 {
@@ -607,6 +621,10 @@ span {
     margin-bottom: 15px;
   }
 
+  .text-list .sec img {
+    display: none;
+  }
+
   .text-list h3 {
     font-size: 1rem;
   }
@@ -617,7 +635,7 @@ span {
 
   .description {
     flex-direction: column;
-    text-align: center;
+    text-align: left;
   }
 
   .text-container {
@@ -652,6 +670,22 @@ span {
   .description,
   .data-protect-container {
     flex-direction: column;
+  }
+
+  .footer-container {
+    padding: 0;
+  }
+
+  .footer-container img {
+    height: 90px;
+    width: 100px;
+    margin: 5px 0px 0px 0px;
+  }
+}
+
+@media (min-width: 553px) {
+  .text-list .sec img {
+    display: block;
   }
 }
 
@@ -700,6 +734,16 @@ span {
 
   .paper-image-wrapper {
     max-width: 500px;
+  }
+
+  .footer-container {
+    padding: 0;
+  }
+
+  .footer-container img {
+    height: 90px;
+    width: 100px;
+    margin: 5px 0px 0px 0px;
   }
 }
 
